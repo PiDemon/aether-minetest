@@ -18,4 +18,4 @@ To get a fire infused diamond, insert 50 coal blocks in the left slot, 50 lava b
 
 To get an earth infused diamond, insert 50 silver sandstone into the left slot, 50 steel blocks into the right slot, 50 dirt into the top slot, and 50 bronze blocks into the bottom slot. 
 
-To get an air infusesd  diamond, insert 50 apple tree trunks into the left slot, 50 gold blocks into the right slot, 50 papyrus into the top slot, and 50 cactus blocks into the bottom slot.
+To get an air infused  diamond, insert 50 apple tree trunks into the left slot, 50 gold blocks into the right slot, 50 papyrus into the top slot, and 50 cactus blocks into the bottom slot.
