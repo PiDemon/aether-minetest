@@ -498,8 +498,8 @@ local function recipe(one,two,three,four,pos,result)
 		end
 end
 local function work(pos)
-	recipe("default:ice 50","default:water_bucket 50","default:coral_skeleton 50","default:snowblock 50",pos,"aether_diamond_water")
-	recipe("default:coalblock 50","default:lava_bucket 50","default:flint 50","default:obsidian 50",pos,"aether_diamond_fire")
+	recipe("default:ice 50","bucket:bucket_water 50","default:coral_skeleton 50","default:snowblock 50",pos,"aether_diamond_water")
+	recipe("default:coalblock 50","bucket:bucket_lava 50","default:flint 50","default:obsidian 50",pos,"aether_diamond_fire")
 	recipe("default:silver_sandstone 50","default:steelblock 50","default:dirt 50","default:bronzeblock 50",pos,"aether_diamond_earth")
 	recipe("default:tree 50","default:goldblock 50","default:papyrus 50","default:cactus 50",pos,"aether_diamond_air")
 end
