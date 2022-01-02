@@ -10,6 +10,12 @@ An endgame challenge to distill the very fabric of reality and harness it's powe
 * Aether Imbued Items: After you obtain a block of aether, in adition to making a nice trophie, you can craft it with a number of oridnary objects (such as paper, saplings, and glass fragments) to gain various abilities (such as flight, invisibilty, and super speed). Generally, you gain these abilities while holding the object. Aether infused stone is unbreakable to everyone but it's placer, and an aether infused stick functions as a powerful shovel/sword/axe/pickaxe combination.
 
 ## Elemental Fuser Recipes 
-Use some sort of crafting guide for the other recipes in this mod. Insert pure mese into the floating slot in the upper left corner and pure diamond into the center slot. <br>
+Use some sort of crafting guide for the other recipes in this mod. Insert pure mese into the floating slot in the upper left corner and pure diamond into the center slot.
 
-To get a water infused diamond, insert 50 ice blocks in the left slot,
+To get a water infused diamond, insert 50 ice blocks in the left slot, 50 water buckets in the right slot, 50 coral skeltons in the top slot, and 50 snow blocks in the bottom slot.
+
+To get a fire infused diamond, insert 50 coal blocks in the left slot, 50 lava buckets in the right slot, 50 flint in the top slot, and 50 obsidian in the bottom slot.
+
+To get an earth infused diamond, insert 50 silver sandstone into the left slot, 50 steel blocks into the right slot, 50 dirt into the top slot, and 50 bronze blocks into the bottom slot. 
+
+To get an air infusesd  diamond, insert 50 apple tree trunks into the left slot, 50 gold blocks into the right slot, 50 papyrus into the top slot, and 50 cactus blocks into the bottom slot.
