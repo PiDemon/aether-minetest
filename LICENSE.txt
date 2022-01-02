@@ -25,4 +25,4 @@ THE SOFTWARE.
 License for Media
 ---------------------------------------
 
-All textures and models are licensed under CC-BY-SA 4.0 
+All textures and models are licensed under CC-BY-SA 4.0, except for sfinv_crafting_arrow.png, which is CC-BY-SA 3.0 to paramat.
