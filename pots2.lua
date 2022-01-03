@@ -15,7 +15,7 @@ local function particle2(pos)
 end
 --mese pots
 --95
-minetest.register_node("aether:pot_m_95", {
+minetest.register_node("aether_new:pot_m_95", {
 		description = "Obsidian Pot (95% Pure Mese)",
 		tiles = {{name = "aether_obsidian.png^(aether_pot.png^[colorize:#ffeb3b:90)", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2}},"default_obsidian.png", "default_obsidian.png","default_obsidian.png","default_obsidian.png","default_obsidian.png"},
 		drawtype = "nodebox",
@@ -60,11 +60,11 @@ minetest.register_node("aether:pot_m_95", {
 		end,
 		on_timer = function(pos)
 			particle2(pos)
-			minetest.set_node(pos, {name = "aether:pot_m_96_2"})
+			minetest.set_node(pos, {name = "aether_new:pot_m_96_2"})
 		end
 })
 --96
-minetest.register_node("aether:pot_m_96_2", {
+minetest.register_node("aether_new:pot_m_96_2", {
 		description = "Obsidian Pot (96% Pure Mese, Half Full)",
 		tiles = {{name = "aether_obsidian.png^(aether_pot.png^[colorize:#ffeb3b:70)", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2}},"default_obsidian.png", "default_obsidian.png","default_obsidian.png","default_obsidian.png","default_obsidian.png"},
 		drawtype = "nodebox",
@@ -105,15 +105,15 @@ minetest.register_node("aether:pot_m_96_2", {
 				end				
 		end,
 		on_rightclick = function(pos, node, clicker, itemstack)
-			if itemstack:get_name() == "aether:pot_m_96_2" then 
+			if itemstack:get_name() == "aether_new:pot_m_96_2" then 
 				local inv = clicker:get_inventory()
 				itemstack:take_item()
-				inv:add_item("main", "aether:pot")
-				minetest.set_node(pos, {name = "aether:pot_m_96"}) 
+				inv:add_item("main", "aether_new:pot")
+				minetest.set_node(pos, {name = "aether_new:pot_m_96"}) 
 			end
 		end
 })
-minetest.register_node("aether:pot_m_96", {
+minetest.register_node("aether_new:pot_m_96", {
 		description = "Obsidian Pot (96% Pure Mese)",
 		tiles = {{name = "aether_obsidian.png^(aether_pot.png^[colorize:#ffeb3b:70)", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2}},"default_obsidian.png", "default_obsidian.png","default_obsidian.png","default_obsidian.png","default_obsidian.png"},
 		drawtype = "nodebox",
@@ -158,11 +158,11 @@ minetest.register_node("aether:pot_m_96", {
 		end,
 		on_timer = function(pos)
 			particle2(pos)
-			minetest.set_node(pos, {name = "aether:pot_m_97_2"})
+			minetest.set_node(pos, {name = "aether_new:pot_m_97_2"})
 		end
 })
 --97
-minetest.register_node("aether:pot_m_97_2", {
+minetest.register_node("aether_new:pot_m_97_2", {
 		description = "Obsidian Pot (97% Pure Mese, Half Full)",
 		tiles = {{name = "aether_obsidian.png^(aether_pot.png^[colorize:#ffeb3b:50)", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2}},"default_obsidian.png", "default_obsidian.png","default_obsidian.png","default_obsidian.png","default_obsidian.png"},
 		drawtype = "nodebox",
@@ -203,15 +203,15 @@ minetest.register_node("aether:pot_m_97_2", {
 				end				
 		end,
 		on_rightclick = function(pos, node, clicker, itemstack)
-			if itemstack:get_name() == "aether:pot_m_97_2" then 
+			if itemstack:get_name() == "aether_new:pot_m_97_2" then 
 				local inv = clicker:get_inventory()
 				itemstack:take_item()
-				inv:add_item("main", "aether:pot")
-				minetest.set_node(pos, {name = "aether:pot_m_97"}) 
+				inv:add_item("main", "aether_new:pot")
+				minetest.set_node(pos, {name = "aether_new:pot_m_97"}) 
 			end
 		end
 })
-minetest.register_node("aether:pot_m_97", {
+minetest.register_node("aether_new:pot_m_97", {
 		description = "Obsidian Pot (97% Pure Mese)",
 		tiles = {{name = "aether_obsidian.png^(aether_pot.png^[colorize:#ffeb3b:50)", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2}},"default_obsidian.png", "default_obsidian.png","default_obsidian.png","default_obsidian.png","default_obsidian.png"},
 		drawtype = "nodebox",
@@ -256,11 +256,11 @@ minetest.register_node("aether:pot_m_97", {
 		end,
 		on_timer = function(pos)
 			particle2(pos)
-			minetest.set_node(pos, {name = "aether:pot_m_98_2"})
+			minetest.set_node(pos, {name = "aether_new:pot_m_98_2"})
 		end
 })
 --98
-minetest.register_node("aether:pot_m_98_2", {
+minetest.register_node("aether_new:pot_m_98_2", {
 		description = "Obsidian Pot (98% Pure Mese, Half Full)",
 		tiles = {{name = "aether_obsidian.png^(aether_pot.png^[colorize:#ffeb3b:30)", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2}},"default_obsidian.png", "default_obsidian.png","default_obsidian.png","default_obsidian.png","default_obsidian.png"},
 		drawtype = "nodebox",
@@ -301,15 +301,15 @@ minetest.register_node("aether:pot_m_98_2", {
 				end				
 		end,
 		on_rightclick = function(pos, node, clicker, itemstack)
-			if itemstack:get_name() == "aether:pot_m_98_2" then 
+			if itemstack:get_name() == "aether_new:pot_m_98_2" then 
 				local inv = clicker:get_inventory()
 				itemstack:take_item()
-				inv:add_item("main", "aether:pot")
-				minetest.set_node(pos, {name = "aether:pot_m_98"}) 
+				inv:add_item("main", "aether_new:pot")
+				minetest.set_node(pos, {name = "aether_new:pot_m_98"}) 
 			end
 		end
 })
-minetest.register_node("aether:pot_m_98", {
+minetest.register_node("aether_new:pot_m_98", {
 		description = "Obsidian Pot (98% Pure Mese)",
 		tiles = {{name = "aether_obsidian.png^(aether_pot.png^[colorize:#ffeb3b:30)", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2}},"default_obsidian.png", "default_obsidian.png","default_obsidian.png","default_obsidian.png","default_obsidian.png"},
 		drawtype = "nodebox",
@@ -354,11 +354,11 @@ minetest.register_node("aether:pot_m_98", {
 		end,
 		on_timer = function(pos)
 			particle2(pos)
-			minetest.set_node(pos, {name = "aether:pot_m_99_2"})
+			minetest.set_node(pos, {name = "aether_new:pot_m_99_2"})
 		end
 })
 --99
-minetest.register_node("aether:pot_m_99_2", {
+minetest.register_node("aether_new:pot_m_99_2", {
 		description = "Obsidian Pot (99% Pure Mese, Half Full)",
 		tiles = {{name = "aether_obsidian.png^(aether_pot.png^[colorize:#ffeb3b:15)", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2}},"default_obsidian.png", "default_obsidian.png","default_obsidian.png","default_obsidian.png","default_obsidian.png"},
 		drawtype = "nodebox",
@@ -399,15 +399,15 @@ minetest.register_node("aether:pot_m_99_2", {
 				end				
 		end,
 		on_rightclick = function(pos, node, clicker, itemstack)
-			if itemstack:get_name() == "aether:pot_m_99_2" then 
+			if itemstack:get_name() == "aether_new:pot_m_99_2" then 
 				local inv = clicker:get_inventory()
 				itemstack:take_item()
-				inv:add_item("main", "aether:pot")
-				minetest.set_node(pos, {name = "aether:pot_m_99"}) 
+				inv:add_item("main", "aether_new:pot")
+				minetest.set_node(pos, {name = "aether_new:pot_m_99"}) 
 			end
 		end
 })
-minetest.register_node("aether:pot_m_99", {
+minetest.register_node("aether_new:pot_m_99", {
 		description = "Obsidian Pot (99% Pure Mese)",
 		tiles = {{name = "aether_obsidian.png^(aether_pot.png^[colorize:#ffeb3b:15)", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2}},"default_obsidian.png", "default_obsidian.png","default_obsidian.png","default_obsidian.png","default_obsidian.png"},
 		drawtype = "nodebox",
@@ -452,11 +452,11 @@ minetest.register_node("aether:pot_m_99", {
 		end,
 		on_timer = function(pos)
 			particle2(pos)
-			minetest.set_node(pos, {name = "aether:pot_m_100_2"})
+			minetest.set_node(pos, {name = "aether_new:pot_m_100_2"})
 		end
 })
 --100
-minetest.register_node("aether:pot_m_100_2", {
+minetest.register_node("aether_new:pot_m_100_2", {
 		description = "Obsidian Pot (100% Pure Mese, Half Full)",
 		tiles = {{name = "aether_obsidian.png^(aether_pot.png^[colorize:#ffeb3b:0)", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2}},"default_obsidian.png", "default_obsidian.png","default_obsidian.png","default_obsidian.png","default_obsidian.png"},
 		drawtype = "nodebox",
@@ -497,15 +497,15 @@ minetest.register_node("aether:pot_m_100_2", {
 				end				
 		end,
 		on_rightclick = function(pos, node, clicker, itemstack)
-			if itemstack:get_name() == "aether:pot_m_100_2" then 
+			if itemstack:get_name() == "aether_new:pot_m_100_2" then 
 				local inv = clicker:get_inventory()
 				itemstack:take_item()
-				inv:add_item("main", "aether:pot")
-				minetest.set_node(pos, {name = "aether:pot_m_100"}) 
+				inv:add_item("main", "aether_new:pot")
+				minetest.set_node(pos, {name = "aether_new:pot_m_100"}) 
 			end
 		end
 })
-minetest.register_node("aether:pot_m_100", {
+minetest.register_node("aether_new:pot_m_100", {
 		description = "Obsidian Pot (100% Pure Mese)",
 		tiles = {{name = "aether_obsidian.png^(aether_pot.png^[colorize:#ffeb3b:0)", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2}},"default_obsidian.png", "default_obsidian.png","default_obsidian.png","default_obsidian.png","default_obsidian.png"},
 		drawtype = "nodebox",
@@ -544,8 +544,8 @@ minetest.register_node("aether:pot_m_100", {
 				if thing == "true" then
 					
 				else 
-					minetest.set_node(pos, {name = "aether:pot"})
-					minetest.add_item(pos, "aether:mese")
+					minetest.set_node(pos, {name = "aether_new:pot"})
+					minetest.add_item(pos, "aether_new:mese")
 				end
 		end
 })

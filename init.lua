@@ -66,36 +66,36 @@ local function particle(pos)
 			})
 end
 --items
-minetest.register_craftitem("aether:diamond", {
+minetest.register_craftitem("aether_new:diamond", {
 		description = "Purified Diamond",
 		inventory_image = "aether_diamond.png",
 })
-minetest.register_craftitem("aether:diamond_fire", {
+minetest.register_craftitem("aether_new:diamond_fire", {
 		description = "Fire Infused Diamond",
 		inventory_image = "aether_diamond.png^[colorize:#d50000:70",
 })
-minetest.register_craftitem("aether:diamond_earth", {
+minetest.register_craftitem("aether_new:diamond_earth", {
 		description = "Earth Infused Diamond",
 		inventory_image = "aether_diamond.png^[colorize:#ffeb3b:70",
 })
-minetest.register_craftitem("aether:diamond_air", {
+minetest.register_craftitem("aether_new:diamond_air", {
 		description = "Air Infused Diamond",
 		inventory_image = "aether_diamond.png^[colorize:#4caf4f:70",
 })
-minetest.register_craftitem("aether:diamond_water", {
+minetest.register_craftitem("aether_new:diamond_water", {
 		description = "Water Infused Diamond",
 		inventory_image = "aether_diamond.png^[colorize:#2195f3:70",
 })
-minetest.register_craftitem("aether:mese", {
+minetest.register_craftitem("aether_new:mese", {
 		description = "Purified Mese",
 		inventory_image = "aether_mese.png",
 })
-minetest.register_craftitem("aether:essence", {
+minetest.register_craftitem("aether_new:essence", {
 		description = "Essence of Aether",
 		inventory_image = "aether_essence.png",
 })
 --reactor
-minetest.register_node("aether:reactor_active", {
+minetest.register_node("aether_new:reactor_active", {
 		description = "Aether Reactor Core (active)",
 		paramtype = "light",
 		sunlight_propagates = true,
@@ -121,19 +121,19 @@ minetest.register_node("aether:reactor_active", {
 			},
 		},
 		groups = {cracky = 2},
-		drop = "aether:reactor",
+		drop = "aether_new:reactor",
 		on_construct = function(pos, node)
 			local meta = minetest.get_meta(pos)
 			local inv = meta:get_inventory()
 			inv:set_size("product", 2*1)
 			meta:set_string("formspec", get_formspec_aether_list(minetest.get_meta(pos)))
 			--make it a little easier
-			meta:set_string("aether:reactor", "true")
-			meta:set_string("aether:fire_stab", "true")
-			meta:set_string("aether:water_stab", "true")
-			meta:set_string("aether:air_stab", "true")
-			meta:set_string("aether:earth_stab", "true")
-			meta:set_string("aether:essence", "true")
+			meta:set_string("aether_new:reactor", "true")
+			meta:set_string("aether_new:fire_stab", "true")
+			meta:set_string("aether_new:water_stab", "true")
+			meta:set_string("aether_new:air_stab", "true")
+			meta:set_string("aether_new:earth_stab", "true")
+			meta:set_string("aether_new:essence", "true")
 		end,
 		on_metadata_inventory_put = function(pos, listname, index, stack, player)
 			local meta = minetest.get_meta(pos)
@@ -147,16 +147,16 @@ minetest.register_node("aether:reactor_active", {
 			local meta = minetest.get_meta(pos)
 			if finished_check(minetest.get_meta(pos)) == "true" then
 				pos.x = pos.x-1
-				if minetest.get_node(pos).name ~= "aether:beam" then return end
+				if minetest.get_node(pos).name ~= "aether_new:beam" then return end
 				pos.x = pos.x+2
-				if minetest.get_node(pos).name ~= "aether:beam" then return end
+				if minetest.get_node(pos).name ~= "aether_new:beam" then return end
 				pos.x = pos.x-1
 				pos.z=pos.z-1
-				if minetest.get_node(pos).name ~= "aether:beam" then return end
+				if minetest.get_node(pos).name ~= "aether_new:beam" then return end
 				pos.z=pos.z+2
-				if minetest.get_node(pos).name ~= "aether:beam" then return end
+				if minetest.get_node(pos).name ~= "aether_new:beam" then return end
 				pos.z=pos.z-1
-				if itemstack:get_name() == "aether:mese" then 
+				if itemstack:get_name() == "aether_new:mese" then 
 					meta:set_string("formspec", "")
 					minetest.add_particlespawner({
 						amount = 400,
@@ -208,7 +208,7 @@ minetest.register_node("aether:reactor_active", {
 					})
 					end)
 					minetest.after(16, function(pos) 
-						minetest.set_node(pos, {name = "aether:aether"}) 
+						minetest.set_node(pos, {name = "aether_new:aether"}) 
 						pos.z=pos.z-1
 						minetest.set_node(pos, {name = "air"}) 
 						pos.z=pos.z-1
@@ -247,7 +247,7 @@ minetest.register_node("aether:reactor_active", {
 			end
 		end
 })
-minetest.register_node("aether:reactor", {
+minetest.register_node("aether_new:reactor", {
 		description = "Aether Reactor Core",
 		paramtype = "light",
 		sunlight_propagates = true,
@@ -272,15 +272,15 @@ minetest.register_node("aether:reactor", {
 		},
 		groups = {cracky = 2},
 		on_rightclick = function(pos, node, clicker, itemstack)
-			if itemstack:get_name() == "aether:essence" then 
+			if itemstack:get_name() == "aether_new:essence" then 
 				itemstack:take_item()
-				minetest.set_node(pos, {name = "aether:reactor_active"}) 
+				minetest.set_node(pos, {name = "aether_new:reactor_active"}) 
 				particle(pos)
 			end
 		end
 })
 --stabilizers
-minetest.register_node("aether:fire_stab", {
+minetest.register_node("aether_new:fire_stab", {
 		description = "Aether Reactor Fire Stabilzer",
 		paramtype = "light",
 		sunlight_propagates = true,
@@ -296,22 +296,22 @@ minetest.register_node("aether:fire_stab", {
 			pos.x = pos.x+4
 			local node = minetest.get_node(pos)
 			local targetmeta = minetest.get_meta(pos)
-			if node.name == "aether:reactor_active" then 
-				if itemstack:get_name() == "aether:mese" then
+			if node.name == "aether_new:reactor_active" then 
+				if itemstack:get_name() == "aether_new:mese" then
 					itemstack:take_item()
 					pos.x = pos.x-1
-					minetest.set_node(pos, {name ="aether:beam"})
+					minetest.set_node(pos, {name ="aether_new:beam"})
 					pos.x = pos.x-1
-					minetest.set_node(pos, {name ="aether:beam"})
+					minetest.set_node(pos, {name ="aether_new:beam"})
 					pos.x = pos.x-1
-					minetest.set_node(pos, {name ="aether:beam"})
+					minetest.set_node(pos, {name ="aether_new:beam"})
 					particle(pos)
 				end
 			end
 		end,
 		on_destruct = function(pos)
 			pos.x = pos.x+1
-			if minetest.get_node(pos).name == "aether:beam" then
+			if minetest.get_node(pos).name == "aether_new:beam" then
 			minetest.set_node(pos, {name = "air"})
 			pos.x = pos.x+1
 			minetest.set_node(pos, {name = "air"})
@@ -320,7 +320,7 @@ minetest.register_node("aether:fire_stab", {
 			end
 		end
 })
-minetest.register_node("aether:air_stab", {
+minetest.register_node("aether_new:air_stab", {
 		description = "Aether Reactor Air Stabilzer",
 		paramtype = "light",
 		sunlight_propagates = true,
@@ -336,22 +336,22 @@ minetest.register_node("aether:air_stab", {
 			pos.x = pos.x-4
 			local node = minetest.get_node(pos)
 			local targetmeta = minetest.get_meta(pos)
-			if node.name == "aether:reactor_active" then 
-				if itemstack:get_name() == "aether:mese" then
+			if node.name == "aether_new:reactor_active" then 
+				if itemstack:get_name() == "aether_new:mese" then
 					itemstack:take_item()
 					pos.x = pos.x+1
-					minetest.set_node(pos, {name ="aether:beam"})
+					minetest.set_node(pos, {name ="aether_new:beam"})
 					pos.x = pos.x+1
-					minetest.set_node(pos, {name ="aether:beam"})
+					minetest.set_node(pos, {name ="aether_new:beam"})
 					pos.x = pos.x+1
-					minetest.set_node(pos, {name ="aether:beam"})
+					minetest.set_node(pos, {name ="aether_new:beam"})
 				particle(pos)
 				end
 			end
 		end,
 		on_destruct = function(pos)
 			pos.x = pos.x-1
-			if minetest.get_node(pos).name == "aether:beam" then
+			if minetest.get_node(pos).name == "aether_new:beam" then
 			minetest.set_node(pos, {name = "air"})
 			pos.x = pos.x-1
 			minetest.set_node(pos, {name = "air"})
@@ -360,7 +360,7 @@ minetest.register_node("aether:air_stab", {
 			end
 		end
 })
-minetest.register_node("aether:water_stab", {
+minetest.register_node("aether_new:water_stab", {
 		description = "Aether Reactor Water Stabilzer",
 		paramtype = "light",
 		sunlight_propagates = true,
@@ -376,22 +376,22 @@ minetest.register_node("aether:water_stab", {
 			pos.z = pos.z+4
 			local node = minetest.get_node(pos)
 			local targetmeta = minetest.get_meta(pos)
-			if node.name == "aether:reactor_active" then 
-				if itemstack:get_name() == "aether:mese" then
+			if node.name == "aether_new:reactor_active" then 
+				if itemstack:get_name() == "aether_new:mese" then
 					itemstack:take_item()
 					pos.z = pos.z-1
-					minetest.set_node(pos, {name = "aether:beam"})
+					minetest.set_node(pos, {name = "aether_new:beam"})
 					pos.z = pos.z-1
-					minetest.set_node(pos, {name ="aether:beam"})
+					minetest.set_node(pos, {name ="aether_new:beam"})
 					pos.z = pos.z-1
-					minetest.set_node(pos, {name ="aether:beam"})
+					minetest.set_node(pos, {name ="aether_new:beam"})
 					particle(pos)
 				end
 			end
 		end,
 		on_destruct = function(pos)
 			pos.z = pos.z+1
-			if minetest.get_node(pos).name == "aether:beam" then
+			if minetest.get_node(pos).name == "aether_new:beam" then
 			minetest.set_node(pos, {name = "air"})
 			pos.z = pos.z+1
 			minetest.set_node(pos, {name = "air"})
@@ -400,7 +400,7 @@ minetest.register_node("aether:water_stab", {
 			end
 		end
 })
-minetest.register_node("aether:earth_stab", {
+minetest.register_node("aether_new:earth_stab", {
 		description = "Aether Reactor Earth Stabilzer",
 		paramtype = "light",
 		sunlight_propagates = true,
@@ -416,22 +416,22 @@ minetest.register_node("aether:earth_stab", {
 			pos.z = pos.z-4
 			local node = minetest.get_node(pos)
 			local targetmeta = minetest.get_meta(pos)
-			if node.name == "aether:reactor_active" then 
-				if itemstack:get_name() == "aether:mese" then
+			if node.name == "aether_new:reactor_active" then 
+				if itemstack:get_name() == "aether_new:mese" then
 					itemstack:take_item()
 					pos.z = pos.z+1
-					minetest.set_node(pos, {name = "aether:beam"})
+					minetest.set_node(pos, {name = "aether_new:beam"})
 					pos.z = pos.z+1
-					minetest.set_node(pos, {name = "aether:beam"})
+					minetest.set_node(pos, {name = "aether_new:beam"})
 					pos.z = pos.z+1
-					minetest.set_node(pos, {name = "aether:beam"})
+					minetest.set_node(pos, {name = "aether_new:beam"})
 					particle(pos)
 				end
 			end
 		end,
 		on_destruct = function(pos)
 			pos.z = pos.z-1
-			if minetest.get_node(pos).name == "aether:beam" then
+			if minetest.get_node(pos).name == "aether_new:beam" then
 			minetest.set_node(pos, {name = "air"})
 			pos.z = pos.z-1
 			minetest.set_node(pos, {name = "air"})
@@ -440,7 +440,7 @@ minetest.register_node("aether:earth_stab", {
 			end
 		end
 })
-minetest.register_node("aether:beam", {
+minetest.register_node("aether_new:beam", {
 	description = "Beam",
 	tiles = {{name = "aether_beam.png",animation = {type = "vertical_frames",aspect_w = 16,aspect_h = 16,length = 0.5}}},
 	drawtype = "glasslike",
@@ -477,12 +477,12 @@ end
 local function recipe(one,two,three,four,pos,result)
 		local meta = minetest.get_meta(pos)
 		local inv = meta:get_inventory()
-		if inv:contains_item("product", "aether:diamond") == true and inv:contains_item("mese", "aether:mese") == true and inv:contains_item("one", one) == true and inv:contains_item("two", two) == true and inv:contains_item("three", three) == true and inv:contains_item("four", four) == true then 
+		if inv:contains_item("product", "aether_new:diamond") == true and inv:contains_item("mese", "aether_new:mese") == true and inv:contains_item("one", one) == true and inv:contains_item("two", two) == true and inv:contains_item("three", three) == true and inv:contains_item("four", four) == true then 
 			inv:remove_item("one", one)
 			inv:remove_item("two", two)
 			inv:remove_item("three", three)
 			inv:remove_item("four", four)
-			inv:remove_item("mese", "aether:mese")
+			inv:remove_item("mese", "aether_new:mese")
 			local sone = inv:get_stack("one", 2)
 			local stwo = inv:get_stack("two", 2)
 			local sthree = inv:get_stack("three", 2)
@@ -498,12 +498,12 @@ local function recipe(one,two,three,four,pos,result)
 		end
 end
 local function work(pos)
-	recipe("default:ice 50","bucket:bucket_water 50","default:coral_skeleton 50","default:snowblock 50",pos,"aether:diamond_water")
-	recipe("default:coalblock 50","bucket:bucket_lava 50","default:flint 50","default:obsidian 50",pos,"aether:diamond_fire")
-	recipe("default:silver_sandstone 50","default:steelblock 50","default:dirt 50","default:bronzeblock 50",pos,"aether:diamond_earth")
-	recipe("default:tree 50","default:goldblock 50","default:papyrus 50","default:cactus 50",pos,"aether:diamond_air")
+	recipe("default:ice 50","bucket:bucket_water 50","default:coral_skeleton 50","default:snowblock 50",pos,"aether_new:diamond_water")
+	recipe("default:coalblock 50","bucket:bucket_lava 50","default:flint 50","default:obsidian 50",pos,"aether_new:diamond_fire")
+	recipe("default:silver_sandstone 50","default:steelblock 50","default:dirt 50","default:bronzeblock 50",pos,"aether_new:diamond_earth")
+	recipe("default:tree 50","default:goldblock 50","default:papyrus 50","default:cactus 50",pos,"aether_new:diamond_air")
 end
-minetest.register_node("aether:fuser", {
+minetest.register_node("aether_new:fuser", {
 		description = "Elemental Fuser",
 		tiles = {"aether_fuser_top.png", "aether_fuser_top.png", "aether_fuser_side.png", "aether_fuser_side.png", "aether_fuser_side.png", "aether_fuser_front.png"},
 		paramtype2 = "facedir",
