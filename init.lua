@@ -1,4 +1,4 @@
-local modpath = minetest.get_modpath("aether")
+local modpath = minetest.get_modpath("aether_new")
 dofile(modpath .. "/pots.lua")
 dofile(modpath .. "/pots2.lua")
 dofile(modpath .. "/crafting.lua")
